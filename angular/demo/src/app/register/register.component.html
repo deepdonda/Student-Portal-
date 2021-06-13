@@ -1,0 +1,193 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <!-- <link rel="stylesheet" href="./CSS/register.css">
+        <script type="text/javascript" src="./CSS/register.js"></script> -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+
+
+
+    <link rel="icon" href="Favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <title>Laravel</title>
+    <style>
+        body {
+            background-color: #60a3bc;
+        }
+
+        /*            .card-body
+                        {
+            
+                            background-color: #f39c12;
+                        }*/
+        .card-header {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+        <div class="container">
+            <a class="navbar-brand" href="#">Student portal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:4200/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="my-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header"><b>Register</b></div>
+                        <div class="card-body">
+                            <form  #f="ngForm" (ngSubmit)="onSubmit(f)">
+                                <div class="form-group row">
+                                   <b class="a"> {{msg}}</b>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
+                                        Address</label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="email_address" class="form-control" name="email" ngModel required #email="ngModel">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right ">Password</label>
+                                    <div class="col-md-7">
+                                        <input type="password" id="password" class="form-control" name="password" ngModel required #password="ngModel">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+
+                                    <label for="full_name" class="col-md-4 col-form-label text-md-right">Full
+                                        Name</label>
+
+                                    <div class="col-md-7">
+                                        <input type="text" id="full_name" class="form-control" name="name" ngModel required #name="ngModel">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group row">
+                                    <label for="mobile" class="col-md-4 col-form-label text-md-right">Mobile
+                                        number</label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="mobile" class="form-control" name="mobilenumber" ngModel required #mobilenumber="ngModel">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="brithdate" class="col-md-4 col-form-label text-md-right">Birth
+                                        Date</label>
+                                    <div class="col-md-7">
+                                        <input type="date" name="birthdate"id="brithdate" class="brithdate" ngModel required #birthdate="ngModel">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="present_address" class="col-md-4 col-form-label text-md-right">Present
+                                        Address</label>
+                                    <div class="col-md-7">
+                                        <input type="text" name="presentaddress" id="present_address" class="form-control" ngModel #presentaddress,="ngModel">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="permanent_address"
+                                        class="col-md-4 col-form-label text-md-right">Permanent Address</label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="permanent_address" class="form-control"
+                                            name="permanentaddress" ngModel #permanentaddress="ngModel">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="gender" class="col-md-4 col-form-label text-md-right">Gender</label>
+                                    <div class="col-md-7">
+                                        <select name="gender" id="gender" class="form-control" ngModel #gender="ngModel">
+                                            <option value="male">male</option>
+                                            <option value="female">female</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="cast" class="col-md-4 col-form-label text-md-right">Cast</label>
+                                    <div class="col-md-7">
+                                        <select name="cast" id="cast" class="form-control" ngModel #cast="ngModel">
+                                            <option value="Open">Open</option>
+                                            <option value="SC">SC</option>
+                                            <option value="OBC">OBC</option>
+                                            <option value="other">Other</option>
+
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="branch" class="col-md-4 col-form-label text-md-right">Branch</label>
+                                    <div class="col-md-7">
+                                        <select name="branch" id="Branch" class="form-control" ngModel #branch="ngModel">
+                                            <option value="CE">CE</option>
+                                            <option value="EC">EC</option>
+                                            <option value="IT">IT</option>
+                                            <option value="ME">ME</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        Register
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+
+    </main>
+
+    
+</body>
+
+</html>

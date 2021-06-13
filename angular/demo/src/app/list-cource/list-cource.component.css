@@ -1,0 +1,80 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 Dec, 2020, 1:53:23 PM
+    Author     : deep
+*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+
+b{
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.col-md-5
+{
+    text-align: center;
+}
+
+
+body{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+  /* //  background-color: #f5f8fa; */
+  background-color: #60a3bc;
+  min-height: 100vh;
+  height:100%;   
+}
+
+.navbar-laravel
+{
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+
+.navbar-brand , .nav-link, .my-form, .login-form
+{
+    font-family: Raleway, sans-serif;
+}
+
+.card-header
+{
+    background-color: #c0392b;
+    text-align: center;
+    
+}
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+.a{
+    /* margin-left: 100px; */
+    margin-top:20px ;
+    text-align: center;
+}
