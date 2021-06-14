@@ -89,13 +89,12 @@ routes.delete('/deletenotice/:id', (req, res) => {
 
 })
 routes.post('/updatenotice', (req, res,next) => {
-    //console.log(req.body)
     
     Notice.updateOne({_id:req.body.id},{titale:req.body.titale,description:req.body.description},(err, users) => {
         if (err) {
             res.status(500).json({ errmsg: err })
         }
-       // console.log(users)
+      
         res.status(200).json(users)
     })
         
@@ -109,7 +108,7 @@ routes.put('/updatenotice', upload.single('file'),(req, res,next) => {
         if (err) {
             res.status(500).json({ errmsg: err })
         }
-       // console.log(users)
+      
         res.status(200).json(users)
     })
         

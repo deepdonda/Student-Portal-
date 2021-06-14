@@ -16,15 +16,10 @@ require('./models/marksSchema')
 require('./models/notice')
 require('./models/course')
 app.use(express.json())
-// app.use(require('./routes/auth'))
-// app.use(require('./routes/assignment'))
 app.use('/uploads',express.static('uploads'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
-
-
-
 
 var appRoutes=require('./routes/auth')
 var markRoutes=require('./routes/marks')

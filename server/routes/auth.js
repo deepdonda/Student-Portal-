@@ -22,7 +22,7 @@ routes.get('/', (req, res) => {
     res.send('hello world')
 })
 routes.post('/singup', (req, res) => {
-    // console.log("backend")
+   
     const { name, email, password, mobilenumber, birthdate, presentaddress, permanentaddress, gender, cast, branch, degree, } = req.body
     if (!email || !password || !name) {
         return res.status(422).json({ error: "please add all the fields" })
@@ -73,11 +73,7 @@ routes.post('/singup', (req, res) => {
                               });
                             let payload = { subjet: user._id }
                             let token = jwt.sign(payload, 'secretket')
-
-                            //res.json({massag:"student register"})
                             res.json({token:token})
-                           // res.status.send({ token })
-
                         })
 
                         .catch(err => {
@@ -107,12 +103,8 @@ routes.post('/signin', (req, res) => {
             bcrypt.compare(password, savedUser.password)
                 .then(doMatch => {
                     if (doMatch) {
-                        // res.json({message:"successfully signed in"})
-                        //const token = jwt.sign({_id:savedUser._id},JWT_SECRET)
-                        //const {_id,name,email,followers,following,pic} = savedUser
                         let payload = { subjet: savedUser._id }
                         let token = jwt.sign(payload, 'secretket')
-                       // res.json({ user: { email } })
                        res.json({'token':token,'email':savedUser.email,'roll':savedUser.roll})
                     }
                     else {
@@ -161,17 +153,11 @@ routes.post('/add_exam_subject_name', (req, res, next) => {
     
     this.exam=req.body.exam;
     this.subject=req.body.subject;
-    //console.log(this.exam);
-    //console.log(this.subject);
     res.json({ massag: "subject and exam name set" })
 })
 routes.post('/add_result_exam_name', (req, res, next) => {
     
-    this.result_exam=req.body.exam;
-   
-    
-    //console.log(this.result_exam);
-    
+    this.result_exam=req.body.exam;    
     res.json({ massage: this.result_exam })
 })
 routes.get('/getmark/:email',(req,res,next)=>{
